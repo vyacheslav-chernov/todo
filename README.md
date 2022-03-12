@@ -1,1 +1,1 @@
-# todo
+# It's a simple ToDo project

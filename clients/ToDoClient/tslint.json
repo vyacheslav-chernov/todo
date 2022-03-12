@@ -1,0 +1,21 @@
+{
+    "defaultSeverity": "error",
+    "extends": [
+        "tslint:recommended"
+    ],
+    "jsRules": {},
+    "rules": {
+        "prettier": true,
+        "import-spacing": true,
+        "indent": [
+          true,
+          "spaces",
+          4
+        ],
+        "max-line-length": [
+            false,
+            120
+        ]
+    },
+    "rulesDirectory": ["tslint-plugin-prettier"]
+}
