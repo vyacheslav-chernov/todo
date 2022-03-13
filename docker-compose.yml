@@ -1,0 +1,7 @@
+version: "3.9"
+
+services:
+  to-do-client:
+    build: clients/ToDoClient/
+    ports:
+      - 80:80
