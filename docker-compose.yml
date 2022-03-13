@@ -3,5 +3,25 @@ version: "3.9"
 services:
   to-do-client:
     build: clients/ToDoClient/
+    container_name: "to-do-client"
     ports:
-      - 80:80
+      - 4201:80
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.to-do-client.rule=Host(`localhost`)"
+      - "traefik.http.routers.to-do-client.entrypoints=web"
+  
+  traefik:
+    image: "traefik:v2.6"
+    container_name: "traefik"
+    command:
+      #- "--log.level=DEBUG"
+      - "--api.insecure=true"
+      - "--providers.docker=true"
+      - "--providers.docker.exposedbydefault=false"
+      - "--entrypoints.web.address=:80"
+    ports:
+      - "80:80"
+      - "8080:8080"    
+    volumes:
+      - "/var/run/docker.sock:/var/run/docker.sock:ro"
