@@ -5,9 +5,14 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "build:prod": "ng build --prod",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "lint": "tslint 'src/**/*.ts'"
+    "lint": "tslint 'src/**/*.ts'",
+    "": "//***************** Docker **********************//",
+    "docker:run": "docker run -d -p 80:80 slacher/to-do-client:latest",
+    "docker:push": "docker push slacher/to-do-client:latest",
+    "docker:build": "docker build -t slacher/to-do-client:latest ."
   },
   "private": true,
   "dependencies": {
