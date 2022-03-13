@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/vyacheslav-chernov/todo#readme",
   "dependencies": {
-    "@angular/cli": "^13.2.6"
+    "@angular/cli": "^13.2.6",
+    "@nestjs/cli": "^8.2.2"
   }
 }
