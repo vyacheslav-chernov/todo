@@ -1,0 +1,7 @@
+http:
+  routers:
+    host:
+      entryPoints: 
+      - https
+      service: to-do-client
+      rule: Host(`localhost`)
